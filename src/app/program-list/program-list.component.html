@@ -1,0 +1,49 @@
+
+<div class="year">
+
+  <p>Год 1</p>
+    <div *ngIf="loading == true" class="loader">
+      <md-progress-circle mode="indeterminate" color="primary"></md-progress-circle>
+    </div>
+  <div *ngIf="loading == false">
+  <div  *ngFor="let discipline of DisciplinesList1">
+    <div>{{discipline.title}}</div>
+  </div>
+  </div>
+</div>
+
+<div class="year">
+  <p>Год 2</p>
+    <div *ngIf="loading == true" class="loader">
+      <md-progress-circle mode="indeterminate" color="primary"></md-progress-circle>
+    </div>
+  <div *ngIf="loading == false">
+  <div  *ngFor="let discipline of DisciplinesList2">
+    <div>{{discipline.title}}</div>
+  </div>
+  </div>
+</div>
+
+<div class="year">
+  <p>Год 3</p>
+    <div *ngIf="loading == true" class="loader">
+      <md-progress-circle mode="indeterminate" color="primary"></md-progress-circle>
+    </div>
+  <div *ngIf="loading == false">
+  <div  *ngFor="let discipline of DisciplinesList3">
+    <div>{{discipline.title}}</div>
+  </div>
+  </div>
+</div>
+
+<div class="year">
+  <p>Год 4</p>
+    <div *ngIf="loading == true" class="loader">
+      <md-progress-circle mode="indeterminate" color="primary"></md-progress-circle>
+    </div>
+  <div *ngIf="loading == false">
+  <div  *ngFor="let discipline of DisciplinesList4">
+    <div>{{discipline.title}}</div>
+  </div>
+  </div>
+</div>
