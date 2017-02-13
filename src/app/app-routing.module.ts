@@ -6,6 +6,8 @@ import { ProgramComponent } from 'app/program/program.component';
 
 import { CourseListComponent } from 'app/course-list/course-list.component';
 import { CourseComponent } from 'app/course/course.component';
+import { NavigationComponent } from 'app/navigation/navigation.component';
+import { AppComponent } from 'app/app.component';
 
 const routes: Routes = [
   {
@@ -24,17 +26,26 @@ const routes: Routes = [
 
   {
     path: 'course-list',
-    component: CourseListComponent,
+    component: CourseListComponent,    
+    data: {          
+       title: 'Список курсов'         
+      },
     children: [
         {
             path: ':id',
             component: CourseComponent
         }
     ]
+  },
+
+  {
+    path: 'home',
+    redirectTo: '/',
+    pathMatch:'full',
+    data: {          
+       title: 'Главная'         
+      },
   }
-
-  
-
 
 ];
 
@@ -43,4 +54,6 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-export class AppRoutingModule { }
+
+export class AppRoutingModule{ }
+

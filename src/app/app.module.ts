@@ -11,6 +11,8 @@ import { ProgramComponent } from './program/program.component';
 import { CourseComponent } from './course/course.component';
 
 import { MaterialModule } from '@angular/material';
+import { NavigationComponent } from './navigation/navigation.component';
+import { DisciplineComponent } from './discipline/discipline.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MaterialModule } from '@angular/material';
     ProgramListComponent,
     CourseListComponent,
     ProgramComponent,
-    CourseComponent
+    CourseComponent,
+    NavigationComponent,
+    DisciplineComponent
   ],
   imports: [
     MaterialModule.forRoot(),
