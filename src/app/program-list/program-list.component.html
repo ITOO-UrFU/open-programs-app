@@ -1,3 +1,7 @@
+<div *ngIf="loading == true" class="loader">
+  <md-progress-circle mode="indeterminate" color="primary"></md-progress-circle>
+</div>
+<div *ngIf="loading == false">
 
 
 
@@ -12,4 +16,3 @@
       <div class="year"> <p>Год {{i+1}} </p><app-discipline *ngFor="let discipline of year" [discipline]="discipline"></app-discipline></div>
       
     </div>
-  </div>

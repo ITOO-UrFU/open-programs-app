@@ -10,6 +10,7 @@ import { Discipline } from 'app/discipline/discipline';
 
 export class DisciplineComponent implements OnInit {
 @Input() discipline: Discipline;
+
   constructor() { }
 
   ngOnInit() {
