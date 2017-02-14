@@ -2,17 +2,16 @@
   <md-progress-circle mode="indeterminate" color="primary"></md-progress-circle>
 </div>
 <div *ngIf="loading == false">
-
-
-
-
   
-    <div *ngIf="loading == true" class="loader">
-      <md-progress-circle mode="indeterminate" color="primary"></md-progress-circle>
-    </div>
-  <div *ngIf="loading == false">
-    <div *ngFor="let year of DisciplineListArray; let i = index">  
-   
-      <div class="year"> <p>Год {{i+1}} </p><app-discipline *ngFor="let discipline of year" [discipline]="discipline"></app-discipline></div>
-      
-    </div>
+  <div class="year" *ngFor="let year of DisciplineListArray; let i = index">
+
+
+      <p>Год {{i+1}} </p>
+      <md-grid-list cols="8" rowHeight="100px">
+        <md-grid-tile *ngFor="let discipline of year" [style.background]="'lightblue'">
+          <app-discipline [discipline]="discipline"></app-discipline>
+        </md-grid-tile>
+      </md-grid-list>
+
+  </div>
+</div>
